@@ -18,14 +18,14 @@ router.get('/new', (req, res) => {
 });
 
 
-router.delete('/:id', (req, res) => {
+router.delete('/games/:id', (req, res) => {
 	Game.findByIdAndRemove(req.params.id, () => {
-		res.redirect('./games');
+		res.redirect('/games');
 	});
 });
-router.get('/:id/edit', (req, res) => {
+router.get('/games/:id/edit', (req, res) => {
 	Game.findById(req.params.id, (err, foundGame) => {
-		res.render('./games/edit.ejs', {
+		res.render('/games/edit.ejs', {
 			game: foundGame
 		});
 	});
