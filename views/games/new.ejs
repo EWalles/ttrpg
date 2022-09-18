@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>New Game</title>
+</head>
+
+<body>
+	<header>
+		<h1>Add a Game</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/games">Game Index</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<form action="/games" method="POST">
+			Title: <input type="text" name="title" />
+			<br>
+			Author: <input type="text" name="author" />
+			<br>
+			Publisher: <input type="text" name="publisher" />
+			<br>
+
+			<input type="submit" value="Publish Game" />
+		</form>
+	</main>
+</body>
+
+</html>
+
